@@ -26,7 +26,7 @@ function initExercise1(){
     }
     exercise.innerText = 'Punto 1';
     header.innerText = 'Tu lista ordenada alfabeticamente es:';
-    answer.innerText = '[' + namesList.sort() + ']';
+    answer.innerText = '[' + namesList.sort().join(", ") + ']';
 }
 
 function initExercise2() {
@@ -42,7 +42,7 @@ function initExercise2() {
     }
     
     exercise.innerText = 'Punto 2';
-    header.innerText = 'Tu frase invertida es: ' + invertedPhrase;
+    header.innerHTML = 'Tu frase invertida es: <p class="font-weight-normal">' + invertedPhrase + '</p>';
     answer.innerText = 'Tiene ' + letters + ' letra(s) y ' + (phrase.length - letters) + ' espacio(s)';
 }
     
