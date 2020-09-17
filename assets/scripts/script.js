@@ -1,28 +1,36 @@
 const exercise1 = document.getElementById('exercise1');
 const exercise2 = document.getElementById('exercise2');
 const exercise3 = document.getElementById('exercise3');
+const rightPanel = document.getElementById('rightPanel');
+const exercise = document.getElementById('exercise');
+const answer = document.getElementById('answer');
+const header = document.getElementById('header');
 
 exercise1.addEventListener('click', initExercise1);
 exercise2.addEventListener('click', initExercise2);
 exercise3.addEventListener('click', initExercise3);
 
 function initExercise1(){
+    rightPanel.classList.remove('d-none');
     let namesList = [];
     let name = prompt('Ingresa un nombre');
     
     while(name != ' '){
         if(namesList.indexOf(name)!=-1){
-            console.log("No debes repetir nombres");
+            alert("No debes repetir nombres");
         }
         else{
             namesList.push(name); 
         }
         name = prompt('Ingresa un nombre');
     }
-    console.log(namesList.sort());
+    exercise.innerText = 'Punto 1';
+    header.innerText = 'Tu lista ordenada alfabeticamente es:';
+    answer.innerText = '[' + namesList.sort() + ']';
 }
 
 function initExercise2() {
+    rightPanel.classList.remove('d-none');
     var phrase = prompt('Ingresa una palabra o frase');
     let invertedPhrase = '';
     let letters = 0;
@@ -33,11 +41,13 @@ function initExercise2() {
         letters++;
     }
     
-    console.log('Tu palabra al revés es: ' + invertedPhrase);
-    console.log('Tiene ' + letters + ' letra(s) y ' + (phrase.length - letters) + ' espacio(s)');
+    exercise.innerText = 'Punto 2';
+    header.innerText = 'Tu frase invertida es: ' + invertedPhrase;
+    answer.innerText = 'Tiene ' + letters + ' letra(s) y ' + (phrase.length - letters) + ' espacio(s)';
 }
     
 function initExercise3(){
+    rightPanel.classList.remove('d-none');
     var phrase = prompt('Ingresa una palabra o frase');
     let separatedPhrase = '';
     
@@ -49,6 +59,8 @@ function initExercise3(){
         else
         separatedPhrase += phrase[i] + '-';
     }
-    console.log(separatedPhrase);
+    exercise.innerText = 'Punto 3';
+    header.innerText = 'Tu frase separada por guiones es:';
+    answer.innerText = separatedPhrase;
 }
 

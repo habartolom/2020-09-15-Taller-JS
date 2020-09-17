@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +8,21 @@
     <link rel="stylesheet" href="./assets/styles/style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="workshop m-5 p-5 border border-secondary rounded bg-light">
+    <div class="container d-flex justify-content-around">
+        <div class="m-5 p-5 border border-secondary rounded bg-light col-5">
             <h1 class="text-primary text-center">Taller JS</h1>
-            <h4 class="text-center">Selecciona el punto que desas ver!</h4>
-            <h5 class="text-center">Recuerda abrir la consola</h5>
+            <h5 class="text-center">Selecciona el punto que desas ver!</h5>
             <div class="buttons d-flex flex-column justify-content-center align-items-center">
-                <button class="button bg-primary p-3 m-3 rounded-pill col-5" id="exercise1">Punto 1</button>
-                <button class="button bg-primary p-3 m-3 rounded-pill col-5" id="exercise2">Punto 2</button>
-                <button class="button bg-primary p-3 m-3 rounded-pill col-5" id="exercise3">Punto 3</button>
+                <button class="button bg-primary p-3 m-3 rounded-pill col-4" id="exercise1">Punto 1</button>
+                <button class="button bg-primary p-3 m-3 rounded-pill col-4" id="exercise2">Punto 2</button>
+                <button class="button bg-primary p-3 m-3 rounded-pill col-4" id="exercise3">Punto 3</button>
+            </div>
+        </div>
+        <div class="m-5 p-5 border border-secondary rounded bg-light col-5 d-none" id="rightPanel">
+            <div class="d-flex flex-column align-items-center justify-content-center" id="solution">
+                <h4 class="text-primary text-center m-3" id="exercise"></h4>
+                <h5 class="text-center m-1" id="header"></h5>
+                <p class="text-center m-1" id="answer"></p>
             </div>
         </div>
     </div>
